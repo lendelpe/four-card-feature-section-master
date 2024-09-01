@@ -1,0 +1,187 @@
+/*---------------------------------------*\
+  # VARIABLES
+\*---------------------------------------*/
+
+:root {
+	--clr-primary-red: hsl(0, 78%, 62%);
+	--clr-primary-cyan: hsl(180, 62%, 55%);
+	--clr-primary-orange: hsl(34, 97%, 64%);
+	--clr-primary-blue: hsl(212, 86%, 64%);
+
+	--clr-very-dark-blue: hsl(234, 12%, 34%);
+	--clr-grayish-blue: hsl(229, 6%, 66%);
+	--clr-very-light-gray: hsl(0, 0%, 98%);
+
+	--fs-body: 15px;
+
+	--ff-body: "Poppins", sans-serif;
+	--fw-extra-light: 200;
+	--fw-normal: 400;
+	--fw-semi-bold: 600;
+}
+
+/*---------------------------------------*\
+ # RESET
+\*---------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* general */
+body {
+	font-family: var(--ff-body);
+	font-size: var(--fs-body);
+	color: var(--clr-very-dark-blue);
+	background-color: var(--clr-very-light-gray);
+  padding: 5rem 1.5rem;
+}
+
+
+
+.product__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.product__title {
+  font-weight: var(--fw-normal);
+  font-size: 1.2rem;
+  color: var(--clr-very-dark-blue);
+  margin-bottom: 1.2rem;
+
+  span {
+    font-weight: var(--fw-semi-bold);
+  }
+}
+
+.product__description {
+  font-size: 0.9rem;
+  color: var(--clr-grayish-blue);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  article {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: .3rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+
+    p {
+      color: var(--clr-grayish-blue);
+      font-size: 0.7rem;
+      margin-bottom: 1.7rem;
+    }
+    img {
+      width: 50px;
+      align-self: flex-end;
+    }
+  }
+
+  .box1 {
+    border-top: 4px solid var(--clr-primary-cyan);
+  }
+
+  .box2 {
+    border-top: 4px solid var(--clr-primary-red);
+  }
+
+  .box3 {
+    border-top: 4px solid var(--clr-primary-orange);
+  }
+
+  .box4 {
+    border-top: 4px solid var(--clr-primary-blue);
+  }
+
+  
+}
+
+.box-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 400px) {
+  .product__title {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .product__title {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .wrapper article h3 {
+    font-size: 1.5rem;
+  }
+  .wrapper article p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 2rem 0;
+  }
+  
+  .product__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .wrapper article h3 {
+    font-size: 1.2rem;
+  }
+
+  .wrapper article p {
+    font-size: 0.8rem;
+  }
+
+  .product__title {
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    max-width: 500px;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    article {
+      width: 320px;
+    }
+  }
+
+  .box1, .box4 {
+    justify-self: center;
+  }
+  
+}
